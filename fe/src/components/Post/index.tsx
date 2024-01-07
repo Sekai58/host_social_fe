@@ -64,6 +64,7 @@ const Posts = (props: any) => {
       .then((res) => {
         toast.success("Post deleted");
         dispatch(deletePost(id));
+        console.log(res.data);
       })
       .catch((err) => console.log(err));
   };

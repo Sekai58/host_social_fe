@@ -83,6 +83,7 @@ const ViewProfile = () => {
         }
       )
       .then((res) => {
+        console.log(res.data);
         setFetchSentRequest(true);
         toast.success("Request successfully sent sent", {
           theme: theme ? "dark" : "light",

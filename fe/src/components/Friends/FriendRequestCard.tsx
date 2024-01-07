@@ -44,9 +44,12 @@ const FriendRequestCard = (props: any) => {
       .then((res) => {
         toast.success("Request Accepted", { theme: theme ? "dark" : "light" });
         dispatch(changeFetch(true));
-        // console.log(res.data)
+        console.log(res.data);
       })
-      .catch((err) => toast("Request failed"));
+      .catch((err: any) => {
+        toast("Request failed");
+        console.log(err);
+      });
   };
 
   const handleDecline = async (id: string) => {
@@ -62,11 +65,14 @@ const FriendRequestCard = (props: any) => {
         }
       )
       .then((res) => {
-        // console.log(res.data)
+        console.log(res.data);
         dispatch(changeFetch(true));
         toast.success("Request Declined", { theme: theme ? "dark" : "light" });
       })
-      .catch((err) => toast("Request failed"));
+      .catch((err: any) => {
+        toast("Request failed");
+        console.log(err);
+      });
   };
 
   return (

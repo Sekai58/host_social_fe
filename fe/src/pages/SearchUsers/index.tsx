@@ -78,6 +78,7 @@ const SearchUsers = () => {
       )
       .then((res) => {
         setFetchRequest(true);
+        console.log(res.data);
         toast.success("Request successfully sent", {
           theme: theme ? "dark" : "light",
         });
